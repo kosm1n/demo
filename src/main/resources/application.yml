@@ -1,0 +1,10 @@
+info:
+  Description: MS for Demo's
+spring:
+  application:
+    name: demo-application
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/demo
+    username: admin
+    password: password

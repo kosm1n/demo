@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_demo_create_schema
+      author: cosmin
+      changes:
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS demo
+  - changeSet:
+      id: 02_create_demo_table
+      author: cosmin
+      changes:
+        - createTable:
+            schemaName: demo
+            tableName: demo
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKeyName: demo_pkey
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
