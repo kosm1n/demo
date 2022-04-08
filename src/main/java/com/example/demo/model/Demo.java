@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "demo", schema = "demo")
+@Table(name = "demo")
 @Builder
 @EntityListeners(AuditingEntityListener.class)
 @AllArgsConstructor

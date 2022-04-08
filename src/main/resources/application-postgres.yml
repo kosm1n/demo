@@ -1,0 +1,16 @@
+info:
+  Description: MS for Demo's
+server:
+  port: 8081
+spring:
+  application:
+    name: demo-application
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/demo
+    username: admin
+    password: password
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/postgres/db.changelog-master.yaml
+    url: jdbc:postgresql://localhost:5433/demo

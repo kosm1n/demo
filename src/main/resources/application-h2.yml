@@ -1,0 +1,17 @@
+info:
+  Description: MS for Demo's
+server:
+  port: 8081
+spring:
+  application:
+    name: demo-application
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:demo
+    username: sa
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/h2/db.changelog-master.yaml
+    url: jdbc:h2:mem:demo
+    user: sa
+    password:
